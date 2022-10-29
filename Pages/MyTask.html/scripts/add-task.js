@@ -59,10 +59,10 @@ $(document).ready(function ($) {
         markup = "<tr>\
         <td>" + $name_val + "</td> \
         <td>" + $project_num + "</td> \
-        <td> <img src='../asset/images/in-progress-status.svg' /> </td> \
+        <td> <img src='./assets/in-progress-status.svg' /> </td> \
         <td>" + $priority_val + "</td> \
         <td>" + $due_date_val + "</td> \
-        <td> <img src='../asset/images/request-button.svg' /> </td> \
+        <td> <img src='./assets/request-button.svg' /> </td> \
         </tr>"
         
         $(".task-manager .non-hidden").append(markup)

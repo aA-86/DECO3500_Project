@@ -31,10 +31,11 @@ $(document).ready(function ($) {
     $this = $(this);
     let image_src = $this.find("img").attr("src");
 
-    if (image_src == "../asset/images/down-drop-down.svg") {
-      $this.find("img").attr("src", "../asset/images/up-drop-down.svg");
+    if (image_src == "./assets/down-drop-down.svg") {
+      $this.find("img").attr("src", "./assets/up-drop-down.svg");
+      
     } else {
-      $this.find("img").attr("src", "../asset/images/down-drop-down.svg");
+      $this.find("img").attr("src", "./assets/down-drop-down.svg");
     }
 
     let image_element_id = $this.find("img").attr("id");

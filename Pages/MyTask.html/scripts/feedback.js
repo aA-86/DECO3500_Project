@@ -127,10 +127,10 @@ $(document).ready(function ($) {
 
         if ($data == "option 1") {
             $overlay_img.css("display", "inline-flex");
-            $overlay_img.attr("src", "../asset/images/group-profile-icons.svg");
+            $overlay_img.attr("src", "./assets/group-profile-icons.svg");
         } else {
             $overlay_img.css("display", "inline-flex");
-            $overlay_img.attr("src", "../asset/images/large-group-profile.svg");
+            $overlay_img.attr("src", "./assets/large-group-profile.svg");
         }
         
         $overlay.css("top", "115px");
