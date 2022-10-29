@@ -1,0 +1,34 @@
+.header,
+.footer {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+}
+
+.header {
+    top: 0px;
+    left: 230px;
+    gap: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.footer {
+    top: 800px;
+    left: 40px;
+    width: 100%;
+    gap: 20px;
+}
+
+.footer button {
+    background-color: #5570F1;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}

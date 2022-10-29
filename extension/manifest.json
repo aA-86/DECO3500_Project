@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "BubbleFeature",
+    "description": "Bubble feature prototype background",
+    "version" : "1.0",
+
+    "permissions": ["storage", "webNavigation", "scripting"],
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+
+}

@@ -1,0 +1,95 @@
+table.non-hidden { 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin-top: 5px;
+}
+
+.sub-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+ }
+
+ .task-manager .new {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+ }
+
+ .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #E16161;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+ .circle {
+    width: 10px;
+    height: 10px;
+    color: transparent;
+    border-radius: 50%;
+    background-color: #E16161;
+ }
+
+/* column widths */
+.task-manager:not(.request-content) .col-width .task-name { width: 40% }
+
+.task-manager:not(.request-content) .col-width .project { width: 60/5% } /* 12% */
+
+.task-manager:not(.request-content) .col-width .status { width: 60/5% } /* 12% */
+
+.task-manager:not(.request-content) .col-width .priority { width: 60/5% } /* 12% */
+
+.task-manager:not(.request-content) .col-width .due-date { width: 60/5% } /* 12% */
+
+.task-manager:not(.request-content) .col-width .feedback { width: 60/5% } /* 12% */
+
+th { text-align: left; }
+
+/* image dimensions */
+.completed { width: 100px; }
+
+.high-priority { width: 60px;}
+
+.medium-priority { width: 80px;}
+
+.pending { width: 30px; }
+
+.profile-image-icon { width: 35px; }
+
+table.non-hidden thead { 
+    background-color: transparent; 
+}
+
+table.non-hidden thead th { padding: 10px; }
+
+table.non-hidden tbody { background-color: white; }
+
+table.non-hidden > tbody > tr:not(.hidden-row) > td { padding: 10px; }
+
+/* round table headers */
+table.non-hidden th:first-child { border-radius: 10px 0 0 10px; }
+
+table.non-hidden th:last-child { border-radius: 0 10px 10px 0 }
+
+/* table row rounded edges */
+table.non-hidden tr:first-child td:first-child { border-top-left-radius:10px }
+table.non-hidden tr:first-child td:last-child { border-top-right-radius: 10px;}
+
+table.non-hidden tr:last-child td:first-child { border-bottom-left-radius: 10px;}
+table.non-hidden tr:last-child td:last-child { border-bottom-right-radius: 10px;}
+
+/* 
+This creates the gap between the table headers and table data. 
+Reference: https://stackoverflow.com/questions/9258754/spacing-between-thead-and-tbody
+*/
+table.non-hidden > tbody:before {
+    content:"@"; /* creates a string with '@' as the content */
+    display: block; 
+    width: 250%;
+    line-height: 10px; /*size of the gap */
+    color: transparent; /* set the colour of the string to transparent */
+    background-color: #F3F2F7; /* By default, background colour is #fff */
+    border-bottom: 2px solid #D2D2D2;
+}

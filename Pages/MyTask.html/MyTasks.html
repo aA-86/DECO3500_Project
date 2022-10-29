@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" cpmtemt="width=device-width, initial-scale=1" />
+    <title>MyTasks</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Side bar -->
+      <div class="grid-item sidebar">
+        <div class="profile-image">
+          <img src="./assets/profile-image.svg" />
+        </div>
+        <nav class="navigation">
+          <div class="navigation Team">
+            <img src="./assets/Team.svg" />
+            <a href="TeamPage.html">Team Task</a>
+            <br>
+            <sub>View other team member's tasks</sub>
+          </div>
+          <div class="navigation Me">
+            <img src="./assets/mytask.svg" />
+            <a href="#">My Task</a>
+            <br>
+            <sub>View tasks and feedback</sub>
+          </div>
+          <div class="navigation Notifications">
+            <img src="./assets/bell.svg" />
+            <a href="#">Notifications</a>
+          </div>
+          <div class="Log-out-parent">
+            <div class="Log-out-child">
+              <img src="./assets/red-log-out.svg" />
+              <a href="#">Log Out</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Menu bar -->
+      <div class="grid-item top-menubar">
+        <div id="view">View</div>
+        <div id="button-wrapper">
+          <div><button type = "button">MY TASKS</button></div>
+          <div><button type = "button"><a href="./RequestedFeedback.html">FEEDBACK REQUESTS</a></button></div>
+          <div><button type = "button">PROJECT</button></div>
+          <!--<span class="stretch"></span> -->
+        </div>
+        <div>
+          <button type = "button" type="button" id="task-button">
+            <img class="plus-button" src="./assets/add-task-button.svg" />
+          </button>
+          
+          <!-- Task Modal -->
+          <div class="task-modal">
+            <div class="header">
+              <span>Add new task</span>
+              <div>
+                <span><button class="button-minus">&minus;</button></span>
+                <span><button class="button-cross">&times;</button></span>
+              </div>
+              
+            </div>
+            <div class="content">
+              <div class="name">
+                <div>NAME:</div>
+                <div><textarea rows="2" data-content=""></textarea></div>
+              </div>
+              <div class="due-date">
+                <div>Due Date</div>
+                <div data-content="">
+                  <button type = "button" class="button-due-date" id="button-due-date-1" data-label="" data-content="">
+                    <span class="button-icon"><img src="./assets/calendar.svg"></span>
+                    <span class="button-text" style="margin-left: 5px">Add due date</span>
+                  </button>
+                </div>
+              </div>
+              <div class="project" >
+                <button type="button" class="button-project">
+                  <span>PROJECT</span>
+                  <span data-content=""><img src="./assets/down-arrow-blue.svg"></span>
+                </button>
+              </div>
+              <div class="priority">
+                <button type="button" class="button-priority">
+                  <span>PRIORITY</span>
+                  <span data-content=""><img src="./assets/down-arrow-blue.svg"></span>
+                </button>
+              </div>
+            </div>
+            <div class="button-submit">
+              <button type="button" class="button-done">Done</button>
+            </div>
+
+            <!-- Project Modal -->
+            <div class="project-modal">
+              <div data-label="1">Project 1</div>
+              <div data-label="2">Project 2</div>
+              <div data-label="3">Project 3</div>
+            </div>
+
+            <!-- Priority Modal -->
+            <div class="priority-modal">
+              <div data-label="low" class="low-priority">low</div>
+              <div data-label="medium" class="medium-priority">medium</div>
+              <div data-label="high" class="high-priority">high</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Buttons 
+      <div class="grid-item buttons">
+        <button type = "button" type="button">
+          <img class="plus-button" src="../asset/images/plus.png" />
+          Task
+        </button>
+      </div>
+      -->
+      <!-- Task manager -->
+      <div class="grid-item task-manager">
+        <table class = "non-hidden">
+          <!-- specify column widths -->
+          <colgroup class="col-width">
+            <col span="1" class="task-name" />
+            <col span="1" class="project" />
+            <col span="1" class="status" />
+            <col span="1" class="priority" />
+            <col span="1" class="due-date" />
+            <col span="1" class="feedback" />
+          </colgroup>
+
+          <!-- table -->
+          <thead>
+            <tr>
+              <th>Tasks</th>
+              <th>Project</th>
+              <th>Status</th>
+              <th>Priority</th>
+              <th>Due Date</th>
+              <th>Feedback</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Task 1</td>
+              <td>Project 1</td>
+              <td><img src="./assets/in-progress-status.svg" /></td>
+              <td><img src="./assets/high-priority.svg" /></td>
+              <td>Today</td>
+              <td><button type="button" class="button-request"><img src="./assets/request-button.svg" /></button></td>
+            </tr>
+            <tr>
+              <td>Task 2</td>
+              <td>Project 2</td>
+              <td><img src="./assets/in-progress-status.svg" /></td>
+              <td><img src="./assets/medium-priority.svg" /></td>
+              <td>15 Aug 2022</td>
+              <td>
+                <button type = "button" class="drop-down-arrow" id="button-1" >
+                  <img
+                    id="image-hidden-content-1"
+                    src="./assets/down-drop-down.svg"
+                  />
+                </button>
+                <span style="font-size: 14px; color: #5570F1">(3)</span>
+              </td>
+            </tr>
+            <!-- Hidden Table Content -->
+            <tr id="hidden-row-1" class="hidden-row">
+              <!-- make the hidden content span all 6 columns -->
+              <td colspan = "6">
+              <table id="hidden-content-1" class="hidden-content-table">
+                <colgroup class="hidden-col-width">
+                  <col span="1" class="name" />
+                  <col span="1" class="status" />
+                  <col span="1" class="priority" />
+                  <col span="1" class="due-date" />
+                  <col span="1" class="assignees" />
+                </colgroup>
+                <thead>
+                  <th>Name</th>
+                  <th>Status</th>
+                  <th>Priority</th>
+                  <th>Due Date</th>
+                  <th>Assignees</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Feedback Requested 1 <br />
+                      <div class="sub-content"><sub>8 Aug</sub> <img src="./assets/table/open-figma.svg"></div></td>
+                    <td><button type = "button"><img src="./assets/check-status.svg" /></button></td>
+                    <td><img src="./assets/medium-priority.svg" /></td>
+                    <td>10 Aug 2022</td>
+                    <td>
+                      <img src="./assets/group-profile-icons.svg" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Feedback Requested 2 <br /><sub>10 Aug</sub></td>
+                    <td><button type = "button" class = "status-modal-btn-2"><img src="./assets/0-2-status.svg" /></button></td>
+                    <td><img src="./assets/medium-priority.svg" /></td>
+                    <td>12 Aug 2022</td>
+                    <td>
+                      <img src="./assets/large-group-profile.svg" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Feedback Requested 3 <br /><sub>Today</sub></td>
+                    <td><button type = "button" class = "status-modal-btn-1"><img src="./assets/2-4-status.svg" /></button></td>
+                    <td><img src="./assets/medium-priority.svg" /></td>
+                    <td>13 Aug 2022</td>
+                    <td>
+                      <img src="./assets/group-profile-icons.svg" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="button-request"><img src="./assets/request-button.svg" /></button></td>
+                  </td>
+                  </tr>
+                </tbody>
+              </table>
+            </tr>
+
+            <!-- After hidden row -->
+            <tr>
+              <td>Task 3</td>
+              <td>Project 2</td>
+              <td><img src="./assets/in-progress-status.svg" /></td>
+              <td><img src="./assets/medium-priority.svg" /></td>
+              <td>15 Aug 2022</td>
+              <td>
+                <button type = "button" class="drop-down-arrow" id="button-2">
+                  <img
+                    id="image-hidden-content-2"
+                    src="./assets/down-drop-down.svg"
+                  />
+                </button>
+                <span style="font-size: 14px; color: #5570F1">(0)</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+       <!-- Status Modal -->
+      <div class="status-modal-1">
+        <div class="status-modal-content-1">
+          <span class="close-btn">&times;</span>
+          <button type = "button" class = "blue-icon"><image src="./assets/blue-icon-fill-thank.svg"></button>
+          <button type = "button" class = "purple-icon"><image src="./assets/purple-icon-thank.svg"></button>
+          <button type = "button" id = "jc-icon"><image src="./assets/jc-eye-fill-reminder.svg"></button>
+          <button type = "button" class = "km-icon"><image src="./assets/km-eye-reminder.svg"></button>
+        </div>
+      </div>
+
+      <div class="status-modal-2">
+        <div class="status-modal-content-2">
+          <span class="close-btn">&times;</span>
+          <button type = "button" class = "jc-icon"><image src="./assets/jc-eye-reminder.svg"></button>
+          <button type = "button" class = "km-icon"><image src="./assets/km-eye-reminder.svg"></button>
+        </div>
+      </div>
+
+      <!-- Request Modal -->
+      <div class = "request-modal">
+        <div class="header">
+          <span>Request Feedback</span>
+          <span class="close-btn">&times;</span>
+          <span class="minimise-btn">&minus;</span>
+        </div>
+        <div class="content">
+          <div><span style="margin-right:15%">Task 1</span><span style="margin-right:15%">in</span> <span style="color:#A3AED0" >Project 1</span></div>
+          <div class = "select">
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority"> 
+              <option hidden selected>Select</option>
+              <option id="low" value="1">low</option>
+              <option id="medium" value="2">medium</option>
+              <option id="high" value="3">high</option>
+            </select>
+            <!-- 
+            <button type = "button" class = "button-select" style="margin-left: 30.5%">
+              <span>Select</span>
+              <span><img src="../asset/images/down-arrow-blue.svg"></span>
+            </button>
+            -->
+          </div>
+        <div class="framework">
+          <span>Framework for critique</span>
+          <span><button type = "button" class="default">30</button></span>
+          <span><button type = "button">60</button></span>
+          <span><button type = "button">90</button></span>
+          <span><button type = "button" class="button-image"><img src="./assets/question.svg"></button></span>
+        </div>
+          <div class="assignee">
+            <div>Assignee</div>
+            <div>
+              <button type="button" class="button-select">
+                <span>Select</span>
+                <span><img src="./assets/down-arrow-blue.svg"></span>
+              </button>
+            </div>
+            
+            <!-- Hidden options -->
+            <div class="assignee-modal">
+              <div >
+                <button type="button" data-assignee="option 1"><img src="./assets/group-profile-icons.svg"></button>
+              </div>
+              <div data-assignee="option 2">
+                <button type="button" data-assignee="option 2"><img src="./assets/large-group-profile.svg"></button>
+              </div>
+            </div>
+
+            <!-- Hidden options overlay -->
+            <div class="assignee-modal overlay">
+              <img src="">
+            </div>
+          </div>
+
+          <!-- Due Date -->
+          <div>
+            <span style="margin-right: 28.5%">Due date</span> 
+            <button type = "button" class ="button-due-date" id="button-due-date-2" data-label="" data-content="">
+              <span class="button-icon"><img src="./assets/calendar.svg"></span>
+              <span class="button-text" style="margin-left: 5px">Add due date</span>
+            </button>
+          </div>
+          <div>
+            <span>Description</span> 
+            <br> 
+            <span>
+              <textarea rows="7" cols="90"></textarea>
+            </span>
+          </div>
+        </div>
+        <!-- Drag and Drop reference: https://www.youtube.com/watch?v=Wtrin7C4b7w -->
+        <div class="video-image"> 
+          <div class="drop-zone">
+            <span class="drop-zone__prompt">Drop file here or click to upload</span>
+            <input type="file" name="myFile" class="drop-zone__input" />
+          </div>
+         </div>
+        <div class="footer">
+          <span>
+            <img src="./assets/text.svg">
+            <img src="./assets/file.svg">
+            <img src="./assets/image-plus.svg">
+            <img src="./assets/video.svg">
+            <img src="./assets/face-smile.svg">
+            <img src="./assets/link.svg">
+          </span>
+          <span><button type="button" class="button-submit-request"><img src="./assets/add-task.svg"></button></span>
+        </div>
+
+        <!-- 30-60-90 -->
+        <div class="rule-30-60-90">
+          <span class="cross">
+              <button type="button" class="button-cross">
+                <img src="./assets/cross.svg">
+              </button>
+          </span>
+          <span class="infographic">
+            <img src="./assets/30-60-90 (2).svg" >
+          </span>
+        </div>
+      </div>
+
+      <!-- Sent overlay -->
+      <div class="sent-overlay"> 
+        <div class="times"><button type="button" class="button-times">&times;</button></div>
+        <div class="image">
+          <img src="./assets/tick-circle.svg">
+        </div>
+        <div class="text">Sent</div>
+      </div>
+
+      <!-- Calendar Overlay -->
+      <div class="calendar">
+        <div class="calendar__header">
+          <h2 class="date">19, Wednesday</h2>
+          <h3 class="month">October</h3>
+        </div>
+        <div class="calendar__date">
+          <div class="calendar__day">M</div>
+          <div class="calendar__day">T</div>
+          <div class="calendar__day">W</div>
+          <div class="calendar__day">T</div>
+          <div class="calendar__day">F</div>
+          <div class="calendar__day">S</div>
+          <div class="calendar__day">S</div>
+          <div class="calendar__number" data-current-date="" data-day="Monday"></div>
+          <div class="calendar__number" data-current-date="" data-day="Tuesday"></div>
+          <div class="calendar__number" data-current-date="" data-day="Wednesday"></div>
+          <div class="calendar__number" data-current-date="" data-day="Thursday"></div>
+          <div class="calendar__number" data-current-date="" data-day="Friday"></div>
+          <div class="calendar__number" data-current-date="" data-day="Satutrday">1</div>
+          <div class="calendar__number" data-current-date="" data-day="Sunday">2</div>
+          <div class="calendar__number" data-current-date="" data-day="Monday">3</div>
+          <div class="calendar__number" data-current-date="" data-day="Tuesday">4</div>
+          <div class="calendar__number" data-current-date="" data-day="Wednesday">5</div>
+          <div class="calendar__number" data-current-date="" data-day="Thursday">6</div>
+          <div class="calendar__number" data-current-date="" data-day="Friday">7</div>
+          <div class="calendar__number" data-current-date="" data-day="Saturday">8</div>
+          <div class="calendar__number" data-current-date="" data-day="Sunday">9</div>
+          <div class="calendar__number" data-current-date="" data-day="Monday">10</div>
+          <div class="calendar__number" data-current-date="" data-day="Tuesday">11</div>
+          <div class="calendar__number" data-current-date="" data-day="Wednesday">12</div>
+          <div class="calendar__number" data-current-date="" data-day="Thursday">13</div>
+          <div class="calendar__number" data-current-date="" data-day="Friday">14</div>
+          <div class="calendar__number" data-current-date="" data-day="Saturday">15</div>
+          <div class="calendar__number" data-current-date="" data-day="Sunday">16</div>
+          <div class="calendar__number" data-current-date="" data-day="Monday">17</div>
+          <div class="calendar__number" data-current-date="" data-day="Tuesday">18</div>
+          <div class="calendar__number" data-current-date="current" data-day="Wednesday">19</div>
+          <div class="calendar__number" data-current-date="" data-day="Thursday">20</div>
+          <div class="calendar__number" data-current-date="" data-day="Friday">21</div>
+          <div class="calendar__number" data-current-date="" data-day="Saturday">22</div>
+          <div class="calendar__number" data-current-date="" data-day="Sunday">23</div>
+          <div class="calendar__number" data-current-date="" data-day="Monday">24</div>
+          <div class="calendar__number" data-current-date="" data-day="Tuesday">25</div>
+          <div class="calendar__number" data-current-date="" data-day="Wednesday">26</div>
+          <div class="calendar__number" data-current-date="" data-day="Thursday">27</div>
+          <div class="calendar__number" data-current-date="" data-day="Friday">28</div>
+          <div class="calendar__number" data-current-date="" data-day="Saturday">29</div>
+          <div class="calendar__number" data-current-date="" data-day="Sunday">30</div>
+          <div class="calendar__number" data-current-date="" data-day="Monday">31</div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Notifications  -->
+      <div class="notifications">
+        <div class="provide-feedback">
+          <div class="profile-image"><img src="./assets/Notifications/profile-pic.svg"></div>
+          <div class="message">New Feedback Request</div>
+          <div class="buttons">
+            <span><button type="button" class="button-later">Later</button></span>
+          </div>
+        </div>
+        <div class="custom-thank-you-message">
+          <div class="textbox"><textarea rows="8"></textarea></div>
+          <div class="footer">
+            <div class="recipient">
+              <span>To: </span>
+              <span class="recipient">
+                <img src="./assets/Notifications/profile-pic.svg">
+              </span>
+            </div>
+            <div class="button-submit"><button type="button">Send</button></div>
+          </div>
+        </div>
+        <div class="receive-message">
+          <div class="cross"><button class="button-cross">&times;</button></div>
+          <div class="profile-pic"><img src="./assets/Notifications/profile-pic.svg"></div>
+          <div class="message">Has sent a feedback request</div>
+        </div>
+        <div class="thank-you-notification">
+          <div class="header">
+            <div class="text">Send to</div>
+            <div class="profile-image"><img src="./assets/Notifications/profile-pic.svg"></div>
+          </div>
+          <div class="message">I appreciate your feedback!</div>
+          <div class="buttons">
+            <span><button type="button" class="button-customise">Customise</button></span>
+            <span><button type="button"  class="button-send">Send</button></span>
+          </div>
+        </div>
+
+        <div class="check-feedback">
+          <div class="message">
+            <div class="text"><span>You have received</span><br><span>feedback from</span></div>
+            <div class="image"><img src="./assets/Notifications/profile-pic.svg" /></div>
+          </div>
+          <div class="buttons">
+            <span><button type="button" class="button-later">Later</button></span>
+            <span><button type="button" class="button-check-feedback">Check Feedback</button></span>
+          </div>
+        </div>
+    </div>
+  </body>
+
+  <script src="./scripts/jquery-3.6.1.js"></script>
+  <script src="./scripts/hide.js"></script>
+  <script src="./scripts/modal.js"></script>
+  <script src="./scripts/feedback.js"></script>
+  <script src="./scripts/drag-and-drop.js"></script>
+  <script src="./scripts/calendar.js"></script>
+  <script src="./scripts/add-task.js"></script>
+  <script src="./scripts/notifications.js"></script>
+  <script src="./scripts/menu-buttons.js"></script>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" cpmtemt="width=device-width, initial-scale=1" />
+    <title>Team Page</title>
+    <link rel="stylesheet" href="../TeamCSS/main.css" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Side bar -->
+      <div class="grid-item sidebar">
+        <div class="profile-image">
+          <img src="../asset/images/profile-image.svg" />
+        </div>
+        <nav class="navigation">
+          <div class="navigation Team">
+            <img src="../asset/images/Team.svg" />
+            <a href="TeamPage.html">Team Task</a>
+            <br>
+            <sub class="sub-content">View other team member's tasks</sub>
+          </div>
+          <div class="navigation Me">
+            <img src="../asset/images/mytask.svg" />
+            <a href="MyTasks.html">My Task</a>
+            <br>
+            <sub class="sub-content">View tasks and feedback</sub>
+          </div>
+          <div class="navigation Notifications">
+            <img src="../asset/images/bell.svg" />
+            <a href="#">Notifications</a>
+          </div>
+          <div class="Log-out-parent">
+            <div class="Log-out-child">
+              <img src="../asset/images/red-log-out.svg" />
+              <a href="#">Log Out</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Menu bar -->
+      <div class="grid-item top-menubar">
+        <div class="project-1">
+          <button type="button" class="button-project">
+            <span>PROJECT 1</span>
+            <span><img src="../asset/images/down-arrow-blue.svg"></span>
+          </button>
+        </div>
+        <span class="stretch"></span>
+      </div>
+      <!-- Buttons -->
+      <div class="grid-item buttons">
+        <button type="button" class="button-plus">
+          <img class="plus-button" src="../asset/images/plus.png" />
+          Task
+        </button>
+      </div>
+      <!-- Task manager -->
+      <div class="grid-item task-manager">
+        <table>
+          <!-- specify column widths -->
+          <colgroup class="col-width">
+            <col span="1" class="task-name" />
+            <col span="1" class="priority" />
+            <col span="1" class="due-date" />
+            <col span="1" class="assignees" />
+          </colgroup>
+
+          <!-- table -->
+          <thead>
+            <tr>
+              <th>Task Name</th>
+              <th>Priority</th>
+              <th>Due Date</th>
+              <th>Assignees</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Design in progress</td>
+              <td>
+                <img
+                  class="medium-button"
+                  src="../asset/images/medium-priority.svg"
+                />
+              </td>
+              <td>15 Aug 2021</td>
+              <td><img src="../asset/images/icon-aj.svg" /></td>
+            </tr>
+            <tr>
+              <td>Instructions for using this project</td>
+              <td>
+                <img class="low-button" src="../asset/images/low-button.svg" />
+              </td>
+              <td>15 Aug 2021</td>
+              <td>
+                <img src="../asset/images/icon-jc.svg" />
+              </td>
+            </tr>
+            <tr>
+              <td>Redesign landing page</td>
+              <td>
+                <img class="low-button" src="../asset/images/low-button.svg" />
+              </td>
+              <td>15 Aug 2021</td>
+              <td><img src="../asset/images/icon-jc.svg" /></td>
+              
+            </tr>
+            <tr>
+              <td>Summarise research sessions with UXR team</td>
+              <td>
+                <img class="low-button" src="../asset/images/low-button.svg" />
+              </td>
+              <td>15 Aug 2021</td>
+              <td  class="assignees">
+                <img src="../asset/images/icon-jc.svg" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
