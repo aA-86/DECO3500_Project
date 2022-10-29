@@ -16,9 +16,13 @@
     color: #1B2559;
 }
 
-div.navigation > img, div.navigation > a, .Log-out-child > img,  
+div.navigation > img, div.navigation a, .Log-out-child > img,  
 .Log-out-child > a {
     vertical-align: middle;
+}
+
+.side-nav-div-wrapper > div {
+    padding: 10px;
 }
 
 nav.navigation {
@@ -26,7 +30,7 @@ nav.navigation {
     box-sizing: border-box;
     
 }
-nav.navigation > .Team, .Me, .Notifications {
+nav.navigation .Team, .Me, .Notifications {
     margin: 10px 0px 15px 0px; /* top right bottom left */
     padding: 10px; /* top right bottom left */
     font-size: 20px;
@@ -38,7 +42,7 @@ nav.navigation .Me {
 }
 
 nav.navigation .Me sub,
-nav.navigation .Me a {
+nav.navigation .Me span {
     color: #fff;
 }
 
@@ -46,12 +50,32 @@ nav.navigation .Me img {
     filter: brightness(0%) invert(1);
 }
 
-.Log-out-parent {
+#my-task-sidebar-link {
+    cursor: default
+}
+
+/*#log-out-sidebar-link { */
+    /* Calc = 100vh - Height of each box (including margins and padding) - profile height - (Number of padding on tabs - top padding from .grid-containger - 2 * padding from profile) + offset from margins */
+    /*height: 445px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+*/
+.log-out-parent {
     /* Calc = 100vh - Height of each box (including margins and padding) - profile height - (Number of padding on tabs - top padding from .grid-containger - 2 * padding from profile) + offset from margins */
     height: 445px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#log-out-sidebar-link { 
+    /* Calc = 100vh - Height of each box (including margins and padding) - profile height - (Number of padding on tabs - top padding from .grid-containger - 2 * padding from profile) + offset from margins */
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    margin-bottom: 5px;
 }
 
 .Log-out-child {
