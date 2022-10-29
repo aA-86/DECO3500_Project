@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    box-sizing: border-box;
+    /*grid-template-columns: repeat(2, 1fr);*/
+    grid-template-columns: minmax(200px, auto) 1fr;
+    grid-template-rows: auto auto 1fr;
+    /*background-color: #2196F3;*/
+    background-color: #f3f2f7;
+    gap: 10px;
+    /*padding: 10px;*/
+    height: calc(100vh - 10px); /* minus 10px because of the padding. */
+    width: 100%;
+}
+
+.grid-item { background-color: rgba(255, 255, 255, 0.8); }
+
+.sidebar { grid-row: 1 / span 3; }
