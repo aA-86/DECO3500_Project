@@ -38,17 +38,25 @@
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
-#button-wrapper button:not(.feedback-request) {
-    padding: 10px;
+#button-wrapper button:not(.button-feedback-request) {
     background-color: white;
+}
+
+#button-wrapper button {
+    padding: 10px;
     margin: 5px;
     border-radius: 10px;
 }
-
+/*
 #button-wrapper div:first-child button:not(.request-page),
 .request-page .button-feedback-request {
     background-color: #5570F1;
     color: #fff;
+}
+*/
+#button-wrapper .button-feedback-request {
+    color: #fff;
+    background-color: #5570F1;
 }
 
 /* task button
