@@ -15,28 +15,42 @@
           <img src="./assets/profile-image.svg" />
         </div>
         <nav class="navigation">
-          <div class="navigation Team">
-            <img src="./assets/Team.svg" />
-            <a href="#">Team Task</a>
-            <br>
-            <sub class="sub-content">View other team member's tasks</sub>
-          </div>
-          <div class="navigation Me">
-            <img src="./assets/mytask.svg" />
-            <a href="../MyTask/MyTasks.html">My Task</a>
-            <br>
-            <sub class="sub-content">View tasks and feedback</sub>
-          </div>
-          <div class="navigation Notifications">
-            <img src="./assets/bell.svg" />
-            <a href="#">Notifications</a>
-          </div>
-          <div class="Log-out-parent">
-            <div class="Log-out-child">
-              <img src="./assets/red-log-out.svg" />
-              <a href="#">Log Out</a>
+
+
+          <a href="#" class="side-nav-div-wrapper">
+            <div class="navigation Team">
+              <img src="./assets/Team.svg" />
+              <span>Team Task</span>
+              <br>
+              <sub class="sub-content">View other team member's tasks</sub>
             </div>
+          </a>
+
+          <a href="../MyTask/MyTasks.html" class="side-nav-div-wrapper">
+            <div class="navigation Me">
+              <img src="./assets/mytask.svg" />
+              <span >My Task</span>
+              <br>
+              <sub class="sub-content">View tasks and feedback</sub>
+            </div>
+          </a>
+
+          <a href="#" class="side-nav-div-wrapper"> 
+            <div class="navigation Notifications">
+              <img src="./assets/bell.svg" />
+              <span>Notifications</span>
+            </div>
+          </a>
+
+          <div class="Log-out-parent">
+            <a href="#" class="side-nav-div-wrapper" id="log-out-sidebar-link">
+              <div class="Log-out-child">
+                <img src="./assets/red-log-out.svg" />
+                <span href="#">Log Out</span>
+              </div>
+            </a>
           </div>
+
         </nav>
       </div>
       <!-- Menu bar -->

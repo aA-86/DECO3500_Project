@@ -24,7 +24,7 @@ nav.navigation {
     box-sizing: border-box;   
 }
 
-nav.navigation > .Team, .Me, .Notifications {
+nav.navigation .Team, .Me, .Notifications {
     margin: 10px 0px 15px 0px; /* top right bottom left */
     padding: 10px; /* top right bottom left */
     font-size: 20px;
@@ -33,11 +33,20 @@ nav.navigation > .Team, .Me, .Notifications {
 nav.navigation .Team {
     background-color: #5570F1;
     border-radius: 10px;
+    color: #fff;
+}
+
+nav.navigation .Team img {
+    filter: brightness(0) invert(1);
 }
 
 nav.navigation .Team a,
 nav.navigation .Team sub {
     color: #fff;
+}
+
+.side-nav-div-wrapper > div {
+    padding: 10px;
 }
 
 .Log-out-parent {
@@ -46,6 +55,14 @@ nav.navigation .Team sub {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+#log-out-sidebar-link { 
+    /* Calc = 100vh - Height of each box (including margins and padding) - profile height - (Number of padding on tabs - top padding from .grid-containger - 2 * padding from profile) + offset from margins */
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    margin-bottom: 5px;
 }
 
 .Log-out-child {
