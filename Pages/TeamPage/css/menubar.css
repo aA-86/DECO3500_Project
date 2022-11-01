@@ -1,18 +1,3 @@
-.top-menubar {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: transparent;
-}
-
-.top-menubar > div {
-    /* Profile size = Height of the profile + padding = 78 + 20 = 98 */
-    /* margin-top = Profile size / 2 - Padding = 98/2 - 20 */
-    margin-top: 29px;
-    color: #363E6D;
-    font-weight: bold;
-}
-
 .project-1 .button-project {
     width: 110px;
     height: 40px;
@@ -21,5 +6,429 @@
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
+
+.top-menubar {
+    display: flex;
+    gap: 50px;
+    align-items: flex-end;
+}
+
+.top-menubar > div {
+    /* Profile size = Height of the profile + padding = 78 + 20 = 98 */
+    /* margin-top = Profile size / 2 - Padding = 98/2 - 20 */
+
+    margin-top: 29px;
+    color: #363E6D;
+    font-weight: bold;
+}
+
+/* view */
+#view {
+    vertical-align: bottom;
+    margin-bottom: 13px;
+}
+
+/* "MY TASKS", "FEEDBACK REQUEST" and "PROJECT" buttons. */
+#button-wrapper {
+    display: flex;
+}
+
+#button-wrapper button {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); 
+}
+
+#button-wrapper button:not(.feedback-request) {
+    padding: 10px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#button-wrapper div:first-child button:not(.request-page),
+.request-page .button-feedback-request {
+    background-color: #5570F1;
+    color: #fff;
+}
+
+/* task button
+.plus-button {
+    filter: invert(1);
+}
+ */
+#task-button {
+    border: none;
+    border-radius: 10px;
+    /*width: 80px;*/
+    justify-content: right;
+    vertical-align: baseline;
+    vertical-align: end;
+    margin-left: auto;
+    margin-right: 125px;
+    /* calculation was done by subtracting the original height of the task by the height of the Team tab 
+    */
+    /*margin-top: 38px;*/
+}
+
+/* Add task overlay */
+.task-modal {
+    position: absolute;
+    /*display: none;*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+    width: 535px;
+    height: 400px;
+    background-color: #fff;
+
+    /* subject to change */
+    top: 100px;
+    left: 550px;
+}
+
+.task-modal .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.task-modal .header {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    border-bottom: 2px solid #A3AED0;
+}
+
+.task-modal .header > div {
+    margin-left: 65%;
+}
+
+.task-modal .header > span:first-child, 
+.task-modal .content .name > div:first-child, 
+.due-date > div:first-child, 
+.project > button, 
+.priority > button {
+    margin-left: 10px;
+}
+.task-modal .header > div > span > button {
+    font-size: 20px;
+}
+
+.task-modal .content .name {
+    display: block;
+    margin-top: 20px;
+}
+
+.task-modal .content .name textarea {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.task-modal .content .due-date, .project, .priority {
+    display: inline-flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.project button,
+.priority button {
+    width: 115px;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+.project button span:last-child,
+.priority button span:last-child {
+    margin-left: 5px;
+}
+
+.task-modal .button-submit {
+    display: inline-flex;
+    align-items: center;
+}
+
+.task-modal .button-submit button {
+    width: 80px;
+    padding: 10px;
+    
+    background-color: #5570F1;
+    border-radius: 10px;
+
+    margin-left: 84%;
+    margin-top: -20px;
+    
+    font-size: 16px;
+    color: #fff;
+}
+
+/* project modal */
+.project-modal, .priority-modal {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    width: 115px;
+    border-radius: 10px;
+
+    background-color: #fff;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.project-modal {
+    top: 255px;
+    left: 12px;
+}
+
+.project-modal div {
+    padding: 10px;
+    font-size: 15px;
+}
+
+.project-modal div:hover, .priority-modal div:hover {
+    background-color: rgba(0,0,0,0.1)
+}
+
+/* priority modal */
+.priority-modal {
+    top: 326px;
+    left: 12px;
+}
+
+.priority-modal div {
+    width: 95px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/* Notifications */
+.notifications {
+    /*display: none;*/
+}
+
+.notifications .provide-feedback,
+.notifications .custom-thank-you-message,
+.notifications .receive-message,
+.notifications .thank-you-notification,
+.notifications .check-feedback,
+.feedback-complete-modal {
+    position:absolute;
+    background-color: #fff;
+    width: 450px;
+    height: 230px;
+    overflow: hidden;
+    top: 25%;
+    left: 40%;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notifications .provide-feedback {
+    /*display: grid;*/
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    align-items: center;
+
+    /*top: 310px;
+    left: 220px;*/
+}
+
+.notifications .provide-feedback div {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-complete-modal {
+    display: none;
+}
+
+.feedback-complete-modal .header {
+    position: absolute;
+    top: 5px;
+    left: 420px;
+}
+
+.feedback-complete-modal button {
+    font-size: 20px;
+}
+
+.feedback-complete-modal div {
+    display: block;
+    text-align: center;
+}
+
+.feedback-complete-modal .image {
+    height: 140px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.notifications .provide-feedback .profile-image {
+    margin-top: 30px;
+}
+
+.notifications .provide-feedback img,
+.thank-you-notification img {
+    width: 60px;
+}
+
+.notifications .provide-feedback .buttons,
+.thank-you-notification .buttons,
+.notifications .thank-you-notification .header,
+.notifications .check-feedback .buttons {
+    gap: 20px;
+}
+
+.notifications button {
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 10px;
+
+    width: 140px;
+    height: 40px;
+}
+
+.button-later,
+.thank-you-notification .button-customise {
+    background-color: rgba(82, 112, 241, 0.2);
+    color: #A3AED0;
+}
+
+.notifications .provide-feedback .button-provide-feedback,
+.thank-you-notification .button-send,
+.button-check-feedback {
+    background-color: #5570F1;
+    color: #fff;
+}
+
+.notifications .custom-thank-you-message {
+    /*display: grid;*/
+    display: none;
+    box-sizing: border-box;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    /*top: 310px;
+    left: 700px;
+    */
+    padding: 20px;
+}
+
+.notifications .custom-thank-you-message textarea {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.notifications .custom-thank-you-message .footer {
+    margin-top: 0px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.notifications .custom-thank-you-message img {
+    width: 30px;
+}
+
+.notifications .custom-thank-you-message .button-submit button {
+    background-color: #5570F1;
+    color: #fff;
+    margin-left: 155%;
+}
+
+.notifications .receive-message {
+    /*display: block;*/
+    display: none;
+    box-sizing: border-box;
+
+    /*top: 550px;
+    left: 220px;
+    */
+}
+
+.notifications .receive-message .cross button {
+    margin-left: 79.5%;
+    font-size: 24px;
+}
+
+.notifications .receive-message .profile-pic {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.notifications .receive-message .message {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.notifications .thank-you-notification {
+    /*display: grid;*/
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 1fr;
+    align-items: center;
+
+    /*top: 280px;
+    left: 520px;
+    */
+}
+
+.notifications .thank-you-notification > div {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.notifications .thank-you-notification .header {
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+.notifications .thank-you-notification .message {
+    font-size: 20px;
+}
+
+.notifications .check-feedback {
+    /*display: grid;*/
+    display: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+
+    /*top: 310px;
+    left: 220px;*/
+}
+
+.notifications .check-feedback > div {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.notifications .check-feedback .message {
+    margin-top: 50px;
+    gap: 10px;
+}
+
+
+
 
 

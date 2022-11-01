@@ -64,10 +64,9 @@
         <span class="stretch"></span>
       </div>
       <!-- Buttons -->
-      <div class="grid-item buttons">
-        <button type="button" class="button-plus">
-          <img class="plus-button" src="./assets/plus.png" />
-          Task
+      <div id="task-button-wrapper">
+        <button type="button" id="task-button">
+          <img src="./assets/add-task-button.svg" />
         </button>
       </div>
       <!-- Task manager -->
@@ -135,5 +134,63 @@
         </table>
       </div>
     </div>
+
+    <div class="task-modal">
+      <div class="header">
+        <span>Add new task</span>
+        <div>
+          <span><button class="button-minus">&minus;</button></span>
+          <span><button class="button-cross">&times;</button></span>
+        </div>
+        
+      </div>
+      <div class="content">
+        <div class="name">
+          <div>NAME:</div>
+          <div><textarea rows="2" data-content=""></textarea></div>
+        </div>
+        <div class="due-date">
+          <div>Due Date</div>
+          <div data-content="">
+            <button type = "button" class="button-due-date" id="button-due-date-1" data-label="" data-content="">
+              <span class="button-icon"><img src="./assets/calendar.svg"></span>
+              <span class="button-text" style="margin-left: 5px">Add due date</span>
+            </button>
+          </div>
+        </div>
+        <div class="project" >
+          <button type="button" class="button-project">
+            <span>PROJECT</span>
+            <span data-content=""><img src="./assets/down-arrow-blue.svg"></span>
+          </button>
+        </div>
+        <div class="priority">
+          <button type="button" class="button-priority">
+            <span>PRIORITY</span>
+            <span data-content=""><img src="./assets/down-arrow-blue.svg"></span>
+          </button>
+        </div>
+      </div>
+      <div class="button-submit">
+        <button type="button" class="button-done">Done</button>
+      </div>
+
+      <!-- Project Modal -->
+      <div class="project-modal">
+        <div data-label="1">Project 1</div>
+        <div data-label="2">Project 2</div>
+        <div data-label="3">Project 3</div>
+      </div>
+
+      <!-- Priority Modal -->
+      <div class="priority-modal">
+        <div data-label="low" class="low-priority">low</div>
+        <div data-label="medium" class="medium-priority">medium</div>
+        <div data-label="high" class="high-priority">high</div>
+      </div>
+    </div>
+
   </body>
+  <script src="./scripts/jquery-3.6.1.js"></script>
+  <script src="./scripts/add-task.js"></script>
 </html>
