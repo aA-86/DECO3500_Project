@@ -27,13 +27,13 @@ $(document).ready(function($) {
 
     /* clicking on the icons */
     $(".blue-icon").click(function() {
-        let image = $("#blue-icon img")
+        let image = $(".blue-icon img")
         let image_src = image.attr("src");
 
-        if (image_src == "../assets/blue-icon-fill-thank.svg") {
-            image.attr("src", "../assets/blue-icon-thank.svg");
+        if (image_src == "./assets/blue-icon-fill-thank.svg") {
+            image.attr("src", "./assets/blue-icon-thank.svg");
         } else {
-            image.attr("src", "../assets/blue-icon-fill-thank.svg");
+            image.attr("src", "./assets/blue-icon-fill-thank.svg");
             $(".notifications .thank-you-notification .message").text("I appreciate your feedback!");
             $(".notifications .thank-you-notification").css("display", "grid");
         }
@@ -43,10 +43,10 @@ $(document).ready(function($) {
         let image = $(".purple-icon img")
         let image_src = image.attr("src");
 
-        if (image_src == "../assets/purple-icon-fill-thank.svg") {
-            image.attr("src", "../assets/purple-icon-thank.svg");
+        if (image_src == "./assets/purple-icon-fill-thank.svg") {
+            image.attr("src", "./assets/purple-icon-thank.svg");
         } else {
-            image.attr("src", "../assets/purple-icon-fill-thank.svg");
+            image.attr("src", "./assets/purple-icon-fill-thank.svg");
             $(".notifications .thank-you-notification .message").text("I appreciate your feedback!");
             $(".notifications .thank-you-notification").css("display", "grid");
         }
@@ -56,10 +56,10 @@ $(document).ready(function($) {
         let image = $(".jc-icon img")
         let image_src = image.attr("src");
 
-        if (image_src == "../assets/jc-eye-fill-reminder.svg") {
-            image.attr("src", "../assets/jc-eye-reminder.svg");
+        if (image_src == "./assets/jc-eye-fill-reminder.svg") {
+            image.attr("src", "./assets/jc-eye-reminder.svg");
         } else {
-            image.attr("src", "../assets/jc-eye-fill-reminder.svg");
+            image.attr("src", "./assets/jc-eye-fill-reminder.svg");
             let $reminder_notification = $(".notifications .thank-you-notification");
             $(".notifications .thank-you-notification .message").text("Sorry to bother! I really need feedback from you :)");
             $(".notifications .thank-you-notification").css("display", "grid");
@@ -70,10 +70,10 @@ $(document).ready(function($) {
         let image = $(".km-icon img")
         let image_src = image.attr("src");
 
-        if (image_src == "../assets/km-eye-fill-reminder.svg") {
-            image.attr("src", "../assets/km-eye-reminder.svg");
+        if (image_src == "./assets/km-eye-fill-reminder.svg") {
+            image.attr("src", "./assets/km-eye-reminder.svg");
         } else {
-            image.attr("src", "../assets/km-eye-fill-reminder.svg");
+            image.attr("src", "./assets/km-eye-fill-reminder.svg");
             $(".notifications .thank-you-notification .message").text("Sorry to bother! I really need feedback from you :)");
             $(".notifications .thank-you-notification").css("display", "grid");
         }

@@ -197,7 +197,7 @@
                 <tbody>
                   <tr>
                     <td>Feedback Requested 1 <br />
-                      <div class="sub-content"><sub>8 Aug</sub> <img src="./assets/table/open-figma.svg"></div></td>
+                      <div class="sub-content"><sub>8 Aug</sub> <img src="./assets/open-figma.svg"></div></td>
                     <td><button type = "button"><img src="./assets/check-status.svg" /></button></td>
                     <td><img src="./assets/medium-priority.svg" /></td>
                     <td>10 Aug 2022</td>
@@ -207,7 +207,11 @@
                   </tr>
                   <tr>
                     <td>Feedback Requested 2 <br /><sub>10 Aug</sub></td>
-                    <td><button type = "button" class = "status-modal-btn-2"><img src="./assets/0-2-status.svg" /></button></td>
+                    <td>
+                      <button type = "button" class = "status-modal-btn-2">
+                        <img src="./assets/0-2-status.svg" />
+                      </button>
+                    </td>
                     <td><img src="./assets/medium-priority.svg" /></td>
                     <td>12 Aug 2022</td>
                     <td>
@@ -262,7 +266,7 @@
           <span class="close-btn">&times;</span>
           <button type = "button" class = "blue-icon"><image src="./assets/blue-icon-fill-thank.svg"></button>
           <button type = "button" class = "purple-icon"><image src="./assets/purple-icon-thank.svg"></button>
-          <button type = "button" id = "jc-icon"><image src="./assets/jc-eye-fill-reminder.svg"></button>
+          <button type = "button" class = "jc-icon"><image src="./assets/jc-eye-fill-reminder.svg"></button>
           <button type = "button" class = "km-icon"><image src="./assets/km-eye-reminder.svg"></button>
         </div>
       </div>
@@ -270,8 +274,12 @@
       <div class="status-modal-2">
         <div class="status-modal-content-2">
           <span class="close-btn">&times;</span>
-          <button type = "button" class = "jc-icon"><image src="./assets/jc-eye-reminder.svg"></button>
-          <button type = "button" class = "km-icon"><image src="./assets/km-eye-reminder.svg"></button>
+          <button type = "button" class = "jc-icon">
+            <image src="./assets/jc-eye-reminder.svg" />
+          </button>
+          <button type = "button" class = "km-icon">
+            <image src="./assets/km-eye-reminder.svg" />
+          </button>
         </div>
       </div>
 
@@ -457,7 +465,7 @@
             <div class="recipient">
               <span>To: </span>
               <span class="recipient">
-                <img src="./assets/Notifications/profile-pic.svg">
+                <img src="./assets/profile-pic.svg">
               </span>
             </div>
             <div class="button-submit"><button type="button">Send</button></div>
@@ -465,13 +473,13 @@
         </div>
         <div class="receive-message">
           <div class="cross"><button class="button-cross">&times;</button></div>
-          <div class="profile-pic"><img src="./assets/Notifications/profile-pic.svg"></div>
+          <div class="profile-pic"><img src="./assets/profile-pic.svg"></div>
           <div class="message">Has sent a feedback request</div>
         </div>
         <div class="thank-you-notification">
           <div class="header">
             <div class="text">Send to</div>
-            <div class="profile-image"><img src="./assets/Notifications/profile-pic.svg"></div>
+            <div class="profile-image"><img src="./assets/profile-pic.svg"></div>
           </div>
           <div class="message">I appreciate your feedback!</div>
           <div class="buttons">
@@ -483,14 +491,14 @@
         <div class="check-feedback">
           <div class="message">
             <div class="text"><span>You have received</span><br><span>feedback from</span></div>
-            <div class="image"><img src="./assets/Notifications/profile-pic.svg" /></div>
+            <div class="image"><img src="./assets/profile-pic.svg" /></div>
           </div>
           <div class="buttons">
             <span><button type="button" class="button-later">Later</button></span>
             <span><button type="button" class="button-check-feedback">Check Feedback</button></span>
           </div>
         </div>
-    </div>
+      </div>
   </body>
 
   <script src="./scripts/jquery-3.6.1.js"></script>
