@@ -110,7 +110,7 @@ $(document).ready(function ($) {
 
         let $name_val = $(".task-modal .content textarea").val();
         let $due_date_val = $(".task-modal .content #button-due-date").data("content");
-        let $priority_val = $(".task-modal .content .button-priority").find('span:not("img")').text();
+        let $priority_val = $(".task-modal .content .button-priority").text();
         let $assignees_val = $(".task-modal .content .button-project img").attr('src');
 
         if ($name_val == '') {
@@ -120,9 +120,16 @@ $(document).ready(function ($) {
         if ($due_date_val == '') {
             $due_date_val = 'NO DUE DATE SPECIFIED';
         }
-
-        if ($priority_val == 'PRIORITY') {
+        
+        let priority_width = ''
+        if ($(".task-modal .content .button-priority").find('span:not("img")').text() == 'PRIORITY') {
             $priority_val = 'NO PRIORITY SELECTED';
+        } else if ($priority_val == 'low') {
+            $priority_val = '<img class = "priority-status" src = "./assets/low-button.svg" />';
+        } else if ($priority_val == 'medium') {
+            $priority_val = '<img class = "priority-status" src = "./assets/medium-priority.svg" />';
+        } else if ($priority_val == 'high') {
+            $priority_val = '<img class = "priority-status high-status"src = "./assets/high-priority.svg" />';
         }
 
         if ($assignees_val == './assets/down-arrow-blue.svg') {
@@ -138,6 +145,8 @@ $(document).ready(function ($) {
         <td>" + $assignees_val + "</td> \
         </tr>"
         $(".task-manager > table").append(markup);
-        $("#in-progress-status").css('width','30px')
+        $('.priority-status').css('width', '80px');
+        $('.high-status').css('width', '60px')
+
     })
 })
