@@ -71,8 +71,13 @@ $(document).ready(function ($) {
 
     let $assignees_btn = $(".task-modal .button-project");
     $assignees_btn.click(function() {
-        $(".task-modal .project-modal").css("display", "block");
-        $(this).find("span img").css("transform", "rotate(180deg)");
+        if ($(".task-modal .project-modal").css("display") == 'block') {
+            $(".task-modal .project-modal").css("display", "none");
+            $(this).find("span img").css("transform", "rotate(0deg)");  
+        } else {
+            $(".task-modal .project-modal").css("display", "block");
+            $(this).find("span img").css("transform", "rotate(180deg)");  
+        }
     })
 
     let $assignees_options = $(".task-modal .project-modal div")
@@ -91,8 +96,13 @@ $(document).ready(function ($) {
 
     let $priority_btn = $(".task-modal .button-priority");
     $priority_btn.click(function() {
-        $(".task-modal .priority-modal").css("display", "block");
-        $(this).find("img").css("transform", "rotate(180deg)");
+        if ($(".task-modal .priority-modal").css("display") == 'block') {
+            $(".task-modal .priority-modal").css("display", "none");
+            $(this).find("span img").css("transform", "rotate(0deg)");  
+        } else {
+            $(".task-modal .priority-modal").css("display", "block");
+            $(this).find("span img").css("transform", "rotate(180deg)");  
+        }
     })
 
     let $priority_options = $(".task-modal .priority-modal div")

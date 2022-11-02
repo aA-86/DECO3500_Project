@@ -54,7 +54,7 @@
 /* Add task overlay */
 .task-modal {
     position: absolute;
-    /*display: none;*/
+    display: none;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr 1fr;
     width: 535px;
@@ -183,7 +183,7 @@
 
 .project-modal {
     top: 255px;
-    left: 12px;
+    left: 10px;
 }
 
 .project-modal div {
@@ -192,17 +192,18 @@
 }
 
 .project-modal div:hover, .priority-modal div:hover {
-    background-color: rgba(0,0,0,0.1)
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 /* priority modal */
 .priority-modal {
-    top: 326px;
-    left: 12px;
+    top: 335px;
+    left: 10px;
 }
 
 .priority-modal div {
-    width: 95px;
+    width: 110px;
     padding: 10px;
     overflow: hidden;
 }
