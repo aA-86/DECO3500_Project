@@ -15,13 +15,11 @@
           <img src="./assets/profile-image.svg" />
         </div>
         <nav class="navigation">
-
-
           <a href="#" class="side-nav-div-wrapper">
             <div class="navigation Team">
               <img src="./assets/Team.svg" />
               <span>Team Task</span>
-              <br>
+              <br />
               <sub class="sub-content">View other team member's tasks</sub>
             </div>
           </a>
@@ -29,13 +27,13 @@
           <a href="../MyTask/MyTasks.html" class="side-nav-div-wrapper">
             <div class="navigation Me">
               <img src="./assets/mytask.svg" />
-              <span >My Task</span>
-              <br>
+              <span>My Task</span>
+              <br />
               <sub class="sub-content">View tasks and feedback</sub>
             </div>
           </a>
 
-          <a href="#" class="side-nav-div-wrapper"> 
+          <a href="#" class="side-nav-div-wrapper">
             <div class="navigation Notifications">
               <img src="./assets/bell.svg" />
               <span>Notifications</span>
@@ -50,7 +48,6 @@
               </div>
             </a>
           </div>
-
         </nav>
       </div>
       <!-- Menu bar -->
@@ -58,7 +55,7 @@
         <div class="project-1">
           <button type="button" class="button-project">
             <span>PROJECT 1</span>
-            <span><img src="./assets/down-arrow-blue.svg"></span>
+            <span><img src="./assets/down-arrow-blue.svg" /></span>
           </button>
         </div>
         <span class="stretch"></span>
@@ -93,10 +90,7 @@
             <tr>
               <td>Design in progress</td>
               <td>
-                <img
-                  class="medium-button"
-                  src="./assets/medium-priority.svg"
-                />
+                <img class="medium-button" src="./assets/medium-priority.svg" />
               </td>
               <td>15 Aug 2021</td>
               <td><img src="./assets/icon-aj.svg" /></td>
@@ -118,7 +112,6 @@
               </td>
               <td>15 Aug 2021</td>
               <td><img src="./assets/icon-jc.svg" /></td>
-              
             </tr>
             <tr>
               <td>Summarise research sessions with UXR team</td>
@@ -126,7 +119,7 @@
                 <img class="low-button" src="./assets/low-button.svg" />
               </td>
               <td>15 Aug 2021</td>
-              <td  class="assignees">
+              <td class="assignees">
                 <img src="./assets/icon-jc.svg" />
               </td>
             </tr>
@@ -135,6 +128,7 @@
       </div>
     </div>
 
+    <!-- Add task modal -->
     <div class="task-modal">
       <div class="header">
         <span>Add new task</span>
@@ -142,7 +136,6 @@
           <span><button class="button-minus">&minus;</button></span>
           <span><button class="button-cross">&times;</button></span>
         </div>
-        
       </div>
       <div class="content">
         <div class="name">
@@ -152,22 +145,33 @@
         <div class="due-date">
           <div>Due Date</div>
           <div data-content="">
-            <button type = "button" class="button-due-date" id="button-due-date-1" data-label="" data-content="">
-              <span class="button-icon"><img src="./assets/calendar.svg"></span>
-              <span class="button-text" style="margin-left: 5px">Add due date</span>
+            <button
+              type="button"
+              id="button-due-date"
+              data-label=""
+              data-content=""
+            >
+              <span class="button-icon"
+                ><img src="./assets/calendar.svg"
+              /></span>
+              <span class="button-text" style="margin-left: 5px"
+                >Add due date</span
+              >
             </button>
           </div>
         </div>
         <div class="project" >
           <button type="button" class="button-project">
-            <span>PROJECT</span>
+            <span class = 'text'>ASSIGNEES</span>
             <span data-content=""><img src="./assets/down-arrow-blue.svg"></span>
           </button>
         </div>
         <div class="priority">
           <button type="button" class="button-priority">
             <span>PRIORITY</span>
-            <span data-content=""><img src="./assets/down-arrow-blue.svg"></span>
+            <span data-content=""
+              ><img src="./assets/down-arrow-blue.svg"
+            /></span>
           </button>
         </div>
       </div>
@@ -177,9 +181,9 @@
 
       <!-- Project Modal -->
       <div class="project-modal">
-        <div data-label="1">Project 1</div>
-        <div data-label="2">Project 2</div>
-        <div data-label="3">Project 3</div>
+        <div data-label="1"><img src="./assets/icon-aj.svg"></div>
+        <div data-label="2"><img src="./assets/icon-jc.svg"></div>
+        <div data-label="3"><img src="./assets/icon-ns.svg"></div>
       </div>
 
       <!-- Priority Modal -->
@@ -190,6 +194,59 @@
       </div>
     </div>
 
+    <!-- Calendar Overlay -->
+    <div class="calendar">
+      <div class="calendar__header">
+        <h2 class="date">19, Wednesday</h2>
+        <h3 class="month">October</h3>
+      </div>
+      <div class="calendar__date">
+        <div class="calendar__day">M</div>
+        <div class="calendar__day">T</div>
+        <div class="calendar__day">W</div>
+        <div class="calendar__day">T</div>
+        <div class="calendar__day">F</div>
+        <div class="calendar__day">S</div>
+        <div class="calendar__day">S</div>
+        <div class="calendar__number" data-current-date="" data-day="Monday"></div>
+        <div class="calendar__number" data-current-date="" data-day="Tuesday"></div>
+        <div class="calendar__number" data-current-date="" data-day="Wednesday"></div>
+        <div class="calendar__number" data-current-date="" data-day="Thursday"></div>
+        <div class="calendar__number" data-current-date="" data-day="Friday"></div>
+        <div class="calendar__number" data-current-date="" data-day="Satutrday">1</div>
+        <div class="calendar__number" data-current-date="" data-day="Sunday">2</div>
+        <div class="calendar__number" data-current-date="" data-day="Monday">3</div>
+        <div class="calendar__number" data-current-date="" data-day="Tuesday">4</div>
+        <div class="calendar__number" data-current-date="" data-day="Wednesday">5</div>
+        <div class="calendar__number" data-current-date="" data-day="Thursday">6</div>
+        <div class="calendar__number" data-current-date="" data-day="Friday">7</div>
+        <div class="calendar__number" data-current-date="" data-day="Saturday">8</div>
+        <div class="calendar__number" data-current-date="" data-day="Sunday">9</div>
+        <div class="calendar__number" data-current-date="" data-day="Monday">10</div>
+        <div class="calendar__number" data-current-date="" data-day="Tuesday">11</div>
+        <div class="calendar__number" data-current-date="" data-day="Wednesday">12</div>
+        <div class="calendar__number" data-current-date="" data-day="Thursday">13</div>
+        <div class="calendar__number" data-current-date="" data-day="Friday">14</div>
+        <div class="calendar__number" data-current-date="" data-day="Saturday">15</div>
+        <div class="calendar__number" data-current-date="" data-day="Sunday">16</div>
+        <div class="calendar__number" data-current-date="" data-day="Monday">17</div>
+        <div class="calendar__number" data-current-date="" data-day="Tuesday">18</div>
+        <div class="calendar__number" data-current-date="current" data-day="Wednesday">19</div>
+        <div class="calendar__number" data-current-date="" data-day="Thursday">20</div>
+        <div class="calendar__number" data-current-date="" data-day="Friday">21</div>
+        <div class="calendar__number" data-current-date="" data-day="Saturday">22</div>
+        <div class="calendar__number" data-current-date="" data-day="Sunday">23</div>
+        <div class="calendar__number" data-current-date="" data-day="Monday">24</div>
+        <div class="calendar__number" data-current-date="" data-day="Tuesday">25</div>
+        <div class="calendar__number" data-current-date="" data-day="Wednesday">26</div>
+        <div class="calendar__number" data-current-date="" data-day="Thursday">27</div>
+        <div class="calendar__number" data-current-date="" data-day="Friday">28</div>
+        <div class="calendar__number" data-current-date="" data-day="Saturday">29</div>
+        <div class="calendar__number" data-current-date="" data-day="Sunday">30</div>
+        <div class="calendar__number" data-current-date="" data-day="Monday">31</div>
+      </div>
+    </div>
+  </div>
   </body>
   <script src="./scripts/jquery-3.6.1.js"></script>
   <script src="./scripts/add-task.js"></script>

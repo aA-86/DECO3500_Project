@@ -84,8 +84,6 @@ $(document).ready(function ($) {
 
     let $calendar_num = $(".calendar__number");
     $calendar_num.click(function() {
-        
-
         // Change previous current to nothing.
         $current = $(".calendar__number[data-current-date= 'current']");
         $current.attr("data-current-date", "");

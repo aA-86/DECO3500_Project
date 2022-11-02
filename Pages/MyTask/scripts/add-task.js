@@ -17,21 +17,6 @@ $(document).ready(function ($) {
         $task_modal.css("display", "none");
     })
 
-    let $project_btn = $(".task-modal .button-project");
-    $project_btn.click(function() {
-        $(".task-modal .project-modal").css("display", "block");
-        $(this).find("img").css("transform", "rotate(180deg)");
-    })
-
-    let $project_options = $(".task-modal .project-modal div")
-    $project_options.click(function() {
-        $this = $(this);
-
-        $project_btn.text($this.text())
-        $(".task-modal .project-modal").css("display", "none");
-        $project_btn.find("img").css("transform", "rotate(360deg)");
-    })
-
     let $priority_btn = $(".task-modal .button-priority");
     $priority_btn.click(function() {
         $(".task-modal .priority-modal").css("display", "block");
@@ -53,8 +38,25 @@ $(document).ready(function ($) {
 
         let $name_val = $(".task-modal .content textarea").val();
         let $due_date_val = $(".task-modal .content .button-due-date").data("content");
-        let $project_num = $(".task-modal .content .button-project").text();
-        let $priority_val = $(".task-modal .content .button-priority").text();
+        let $project_num = $(".task-modal .content .button-project").find('span:not("img")').text();
+
+        let $priority_val = $(".task-modal .content .button-priority").find('span:not("img")').text();
+        
+        if ($name_val == '') {
+            $name_val = 'Task 1'
+        }
+
+        if ($due_date_val == '') {
+            $due_date_val = 'NO DUE DATE SPECIFIED';
+        }
+
+        if ($priority_val == 'PRIORITY') {
+            $priority_val = 'NO PRIORITY SELECTED';
+        }
+
+        if ($project_num == 'PROJECT') {
+            $project_num = 'NO PROJECT SELECTED'
+        }
 
         markup = "<tr>\
         <td>" + $name_val + "</td> \
