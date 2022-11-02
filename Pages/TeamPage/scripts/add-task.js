@@ -134,6 +134,8 @@ $(document).ready(function ($) {
 
         if ($assignees_val == './assets/down-arrow-blue.svg') {
             $assignees_val = 'NO ASSIGNEES SELECTED'
+        } else if ($assignees_val == './assets/icon-ns.svg') {
+            $assignees_val = '<img class="icon-ns" src = "' + $assignees_val + '" />'
         } else {
             $assignees_val = '<img src = "' + $assignees_val + '" />'
         }
@@ -146,7 +148,7 @@ $(document).ready(function ($) {
         </tr>"
         $(".task-manager > table").append(markup);
         $('.priority-status').css('width', '80px');
-        $('.high-status').css('width', '60px')
-
+        $('.high-status').css('width', '60px');
+        $('.icon-ns').css('width', '40px');
     })
 })
