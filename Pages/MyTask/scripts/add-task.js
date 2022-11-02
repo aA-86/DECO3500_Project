@@ -19,8 +19,13 @@ $(document).ready(function ($) {
 
     let $project_btn = $(".task-modal .button-project");
     $project_btn.click(function() {
-        $(".task-modal .project-modal").css("display", "block");
-        $(this).find("img").css("transform", "rotate(180deg)");
+        if ($(".task-modal .project-modal").css("display") == 'block') {
+            $(".task-modal .project-modal").css("display", "none");
+            $(this).find("span img").css("transform", "rotate(0deg)");  
+        } else {
+            $(".task-modal .project-modal").css("display", "block");
+            $(this).find("span img").css("transform", "rotate(180deg)");  
+        }
     })
 
     let $project_options = $(".task-modal .project-modal div")
@@ -34,8 +39,13 @@ $(document).ready(function ($) {
 
     let $priority_btn = $(".task-modal .button-priority");
     $priority_btn.click(function() {
-        $(".task-modal .priority-modal").css("display", "block");
-        $(this).find("img").css("transform", "rotate(180deg)");
+        if ($(".task-modal .priority-modal").css("display") == 'block') {
+            $(".task-modal .priority-modal").css("display", "none");
+            $(this).find("span img").css("transform", "rotate(0deg)");  
+        } else {
+            $(".task-modal .priority-modal").css("display", "block");
+            $(this).find("span img").css("transform", "rotate(180deg)");  
+        }
     })
 
     let $priority_options = $(".task-modal .priority-modal div")
@@ -57,7 +67,6 @@ $(document).ready(function ($) {
 
         let $priority_val = $(".task-modal .content .button-priority").text();
         
-        /*
         if ($name_val == '') {
             $name_val = 'Task 1'
         }
@@ -66,14 +75,19 @@ $(document).ready(function ($) {
             $due_date_val = 'NO DUE DATE SPECIFIED';
         }
 
-        if ($priority_val == 'PRIORITY') {
+        if ($(".task-modal .content .button-priority").find('span:not("img")').text() == 'PRIORITY') {
             $priority_val = 'NO PRIORITY SELECTED';
+        } else if ($priority_val == 'low') {
+            $priority_val = '<img class = "priority-status" src = "./assets/low-button.svg" />';
+        } else if ($priority_val == 'medium') {
+            $priority_val = '<img class = "priority-status" src = "./assets/medium-priority.svg" />';
+        } else if ($priority_val == 'high') {
+            $priority_val = '<img class = "priority-status high-status"src = "./assets/high-priority.svg" />';
         }
 
-        if ($project_num == 'PROJECT') {
-            $project_num = 'NO PROJECT SELECTED'
+        if ($(".task-modal .content .button-project").find('span:not("img")').text() == 'PROJECT') {
+            $project_num = 'NO PROJECT SELECTED';
         }
-        */
 
         markup = "<tr>\
         <td>" + $name_val + "</td> \
