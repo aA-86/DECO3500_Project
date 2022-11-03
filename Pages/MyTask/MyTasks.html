@@ -284,108 +284,110 @@
       </div>
 
       <!-- Request Modal -->
-      <div class = "request-modal">
-        <div class="header">
-          <span>Request Feedback</span>
-          <span class="close-btn">&times;</span>
-          <span class="minimise-btn">&minus;</span>
-        </div>
-        <div class="content">
-          <div><span style="margin-right:15%">Task 1</span><span style="margin-right:15%">in</span> <span style="color:#A3AED0" >Project 1</span></div>
-          <div class = "select">
-            <label for="priority">Priority</label>
-            <select name="priority" id="priority"> 
-              <option hidden selected>Select</option>
-              <option id="low" value="1">low</option>
-              <option id="medium" value="2">medium</option>
-              <option id="high" value="3">high</option>
-            </select>
-            <!-- 
-            <button type = "button" class = "button-select" style="margin-left: 30.5%">
-              <span>Select</span>
-              <span><img src="../asset/images/down-arrow-blue.svg"></span>
-            </button>
-            -->
+      <div id="request-modal-background">
+        <div class = "request-modal">
+          <div class="header">
+            <span>Request Feedback</span>
+            <span class="close-btn">&times;</span>
+            <span class="minimise-btn">&minus;</span>
           </div>
-        <div class="framework">
-          <span>Framework for critique</span>
-          <span><button type = "button" class="default">30</button></span>
-          <span><button type = "button">60</button></span>
-          <span><button type = "button">90</button></span>
-          <span><button type = "button" class="button-image"><img src="./assets/question.svg"></button></span>
-        </div>
-          <div class="assignee">
-            <div>Assignee</div>
-            <div>
-              <button type="button" class="button-select">
+          <div class="content">
+            <div><span style="margin-right:15%">Task 1</span><span style="margin-right:15%">in</span> <span style="color:#A3AED0" >Project 1</span></div>
+            <div class = "select">
+              <label for="priority">Priority</label>
+              <select name="priority" id="priority"> 
+                <option hidden selected>Select</option>
+                <option id="low" value="1">low</option>
+                <option id="medium" value="2">medium</option>
+                <option id="high" value="3">high</option>
+              </select>
+              <!-- 
+              <button type = "button" class = "button-select" style="margin-left: 30.5%">
                 <span>Select</span>
-                <span><img src="./assets/down-arrow-blue.svg"></span>
+                <span><img src="../asset/images/down-arrow-blue.svg"></span>
+              </button>
+              -->
+            </div>
+          <div class="framework">
+            <span>Framework for critique</span>
+            <span><button type = "button" class="default">30</button></span>
+            <span><button type = "button">60</button></span>
+            <span><button type = "button">90</button></span>
+            <span><button type = "button" class="button-image"><img src="./assets/question.svg"></button></span>
+          </div>
+            <div class="assignee">
+              <div>Assignee</div>
+              <div>
+                <button type="button" class="button-select">
+                  <span>Select</span>
+                  <span><img src="./assets/down-arrow-blue.svg"></span>
+                </button>
+              </div>
+              
+              <!-- Hidden options -->
+              <div class="assignee-modal">
+                <div >
+                  <button type="button" data-assignee="option 1"><img src="./assets/group-profile-icons.svg"></button>
+                </div>
+                <div data-assignee="option 2">
+                  <button type="button" data-assignee="option 2"><img src="./assets/large-group-profile.svg"></button>
+                </div>
+              </div>
+
+              <!-- Hidden options overlay -->
+              <div class="assignee-modal overlay">
+                <img src="">
+              </div>
+            </div>
+
+            <!-- Due Date -->
+            <div>
+              <span style="margin-right: 28.5%">Due date</span> 
+              <button type = "button" class ="button-due-date" id="button-due-date-2" data-label="" data-content="">
+                <span class="button-icon"><img src="./assets/calendar.svg"></span>
+                <span class="button-text" style="margin-left: 5px">Add due date</span>
               </button>
             </div>
-            
-            <!-- Hidden options -->
-            <div class="assignee-modal">
-              <div >
-                <button type="button" data-assignee="option 1"><img src="./assets/group-profile-icons.svg"></button>
-              </div>
-              <div data-assignee="option 2">
-                <button type="button" data-assignee="option 2"><img src="./assets/large-group-profile.svg"></button>
-              </div>
-            </div>
-
-            <!-- Hidden options overlay -->
-            <div class="assignee-modal overlay">
-              <img src="">
+            <div>
+              <span>Description</span> 
+              <br> 
+              <span>
+                <textarea rows="7" cols="90"></textarea>
+              </span>
             </div>
           </div>
-
-          <!-- Due Date -->
-          <div>
-            <span style="margin-right: 28.5%">Due date</span> 
-            <button type = "button" class ="button-due-date" id="button-due-date-2" data-label="" data-content="">
-              <span class="button-icon"><img src="./assets/calendar.svg"></span>
-              <span class="button-text" style="margin-left: 5px">Add due date</span>
-            </button>
+          <!-- Drag and Drop reference: https://www.youtube.com/watch?v=Wtrin7C4b7w -->
+          <div class="video-image"> 
+            <div class="drop-zone">
+              <span class="drop-zone__prompt">Drop file here or click to upload</span>
+              <input type="file" name="myFile" class="drop-zone__input" />
+            </div>
           </div>
-          <div>
-            <span>Description</span> 
-            <br> 
+          <div class="footer">
             <span>
-              <textarea rows="7" cols="90"></textarea>
+              <img src="./assets/text.svg">
+              <img src="./assets/file.svg">
+              <img src="./assets/image-plus.svg">
+              <img src="./assets/video.svg">
+              <img src="./assets/face-smile.svg">
+              <img src="./assets/link.svg">
+            </span>
+            <span><button type="button" class="button-submit-request"><img src="./assets/add-task.svg"></button></span>
+          </div>
+
+          <!-- 30-60-90 -->
+          <div class="rule-30-60-90">
+            <span class="cross">
+                <button type="button" class="button-cross">
+                  <img src="./assets/cross.svg">
+                </button>
+            </span>
+            <span class="infographic">
+              <img src="./assets/30-60-90 (2).svg" >
             </span>
           </div>
         </div>
-        <!-- Drag and Drop reference: https://www.youtube.com/watch?v=Wtrin7C4b7w -->
-        <div class="video-image"> 
-          <div class="drop-zone">
-            <span class="drop-zone__prompt">Drop file here or click to upload</span>
-            <input type="file" name="myFile" class="drop-zone__input" />
-          </div>
-         </div>
-        <div class="footer">
-          <span>
-            <img src="./assets/text.svg">
-            <img src="./assets/file.svg">
-            <img src="./assets/image-plus.svg">
-            <img src="./assets/video.svg">
-            <img src="./assets/face-smile.svg">
-            <img src="./assets/link.svg">
-          </span>
-          <span><button type="button" class="button-submit-request"><img src="./assets/add-task.svg"></button></span>
-        </div>
-
-        <!-- 30-60-90 -->
-        <div class="rule-30-60-90">
-          <span class="cross">
-              <button type="button" class="button-cross">
-                <img src="./assets/cross.svg">
-              </button>
-          </span>
-          <span class="infographic">
-            <img src="./assets/30-60-90 (2).svg" >
-          </span>
-        </div>
-      </div>
+    </div>
 
       <!-- Sent overlay -->
       <div class="sent-overlay"> 

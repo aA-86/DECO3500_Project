@@ -2,15 +2,13 @@ $(document).ready(function ($) {
     let $request_btn = $(".button-request");
     let $close_btn = $(".close-btn");
     let $minimise_btn = $(".minimise-btn");
-    let $modal = $(".request-modal");
+    let $modal = $("#request-modal-background");
     let $framework_btn = $(".framework button:not(.button-image)");
     let $infographic = $(".rule-30-60-90")
     let $infographic_cross = $(".rule-30-60-90 .button-cross");
     let $question_btn = $(".framework .button-image");
     let $text_area = $("textarea");
- 
-    
-    //let btn_pos_top = $modal_btn.offset();    
+    let $submit_btn = $(".button-submit-request");
 
     /* text area */
     $text_area.click(function() {
@@ -142,5 +140,9 @@ $(document).ready(function ($) {
         $assignee_select.css("display", "inline-flex");
         $hidden_options.css("display", "inline-flex");
         $overlay_img.attr("src", "");
+    })
+
+    $submit_btn.click(function() {
+        $modal.css("display", "none");
     })
 })
