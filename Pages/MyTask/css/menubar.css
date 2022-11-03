@@ -210,9 +210,8 @@
 }
 
 .notifications .provide-feedback,
-.notifications .custom-thank-you-message,
 .notifications .receive-message,
-.notifications .thank-you-notification,
+
 .notifications .check-feedback,
 .feedback-complete-modal {
     position: absolute;
@@ -225,6 +224,21 @@
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
+
+.notifications .custom-thank-you-message,
+.notifications .thank-you-notification {
+    position: absolute;
+    background-color: #fff;
+    width: 450px;
+    height: 230px;
+    overflow: hidden;
+    bottom: 30vh;
+    right: 30vw;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+
 
 .notifications .provide-feedback {
     /*display: grid;*/
