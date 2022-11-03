@@ -212,7 +212,7 @@
 
 /* Notifications */
 .notifications {
-    /*display: none;*/
+    position: relative;
 }
 
 .notifications .provide-feedback,
@@ -226,9 +226,10 @@
     width: 450px;
     height: 230px;
     overflow: hidden;
-    top: 25%;
-    left: 40%;
+    bottom: 0;
+    right: 0;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .notifications .provide-feedback {
