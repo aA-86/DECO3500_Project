@@ -73,7 +73,7 @@
 /* Add task overlay */
 .task-modal {
     position: absolute;
-    /*display: none;*/
+    display: none;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr 1fr;
     width: 535px;
@@ -206,7 +206,7 @@
 
 /* Notifications */
 .notifications {
-    /*display: none;*/
+    position: relative;
 }
 
 .notifications .provide-feedback,
@@ -215,14 +215,15 @@
 .notifications .thank-you-notification,
 .notifications .check-feedback,
 .feedback-complete-modal {
-    position:absolute;
+    position: absolute;
     background-color: #fff;
     width: 450px;
     height: 230px;
     overflow: hidden;
-    top: 25%;
-    left: 40%;
+    bottom: 0;
+    right: 0;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
 .notifications .provide-feedback {
