@@ -1,16 +1,7 @@
-DesignWebsite
-Website for course DECO3500
+<h1>DesignWebsite</h1>
+<h1>Website for course DECO3500</h1>
 
 To interact with the prototype, clone the GitHub repository from https://github.com/KavyaMenda/DECO3500. Open the Pages folder and then open the TeamPage.html file to get started.
-
-Refer to https://github.com/KavyaMenda/DECO3500/wiki for documentation.
-
-Refer to https://youtu.be/ndvQV9xwwUQ for a demonstration of the prototype.
-
-Credentials for accessing GitHub repository
-email: creativeattendance@gmail.com
-username: testuseDECO3500
-password: TeamCapybara!1
 
 Interacting with the Notifications
 To interact with the notification press key number 1, 2, 3 or 4. Key number 5 is an extra notification for the RequestedFeedback.html page.
