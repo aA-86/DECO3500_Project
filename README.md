@@ -1,7 +1,7 @@
 <h1>DesignWebsite</h1>
 <h2>Website for course DECO3500</h2>
 
-To interact with the prototype, clone the GitHub repository from https://github.com/KavyaMenda/DECO3500. Open the Pages folder and then open the TeamPage.html file to get started.
+To interact with the prototype, clone the GitHub repository from https://github.com/aA-86/DECO3500_Project. Open the Pages folder and then open the TeamPage.html file to get started.
 
 <h2>Interacting with the Notifications</h2>
 To interact with the notification press key number 1, 2, 3 or 4. Key number 5 is an extra notification for the RequestedFeedback.html page.
